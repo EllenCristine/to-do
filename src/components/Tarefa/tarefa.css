@@ -1,0 +1,49 @@
+form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.title {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.input-tarefa {
+    margin: 10px;
+    width: 50%;
+}
+
+.adicionar {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.card {
+    align-items: center;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin: 5px;
+    width: 50%;
+
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.task-name {
+    flex: 5;
+}
+
+.icons {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}

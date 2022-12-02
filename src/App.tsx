@@ -1,24 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Tarefa } from './components/Tarefa';
+
+ /* Buscar a tarefa a partir do indice
+Jogar no input a tarefa encontrada
+Salvar em novo estado o indice que está sendo atualizado*/
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <Tarefa />
+      
+
     </div>
   );
 }
