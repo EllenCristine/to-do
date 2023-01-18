@@ -15,14 +15,9 @@ form {
     width: 50%;
 }
 
-.adicionar {
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
 .card {
     align-items: center;
-    background-color: antiquewhite;
+    background-color: '#CED3DC';
     border-radius: 5px;
     display: flex;
     flex-direction: row;

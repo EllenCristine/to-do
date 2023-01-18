@@ -1,7 +1,9 @@
 import './tarefa.css';
+import AddIcon from '@mui/icons-material/Add';
 import { useState } from 'react';
 import { MdOutlineDoneOutline } from 'react-icons/md';
 import { BsTrash, BsPencil } from 'react-icons/bs';
+import { TextField, Button } from '@mui/material';
 
 export const Tarefa = () => {
     const tarefasDefault = ["Estudar Java", "Estudar React"];
@@ -9,12 +11,11 @@ export const Tarefa = () => {
     const [tarefa, setTarefa] = useState("");
 
     const aoAlterar = (index: number) => {
-        
+
     }
-    
+
     const handleChange = (evento: any) => {
         setTarefa(evento.target.value)
-        console.log(tarefa)
     }
 
     const handleSubmit = () => {
@@ -22,35 +23,35 @@ export const Tarefa = () => {
         setTarefa("");
     }
 
-    console.log(tarefas)
-
     return (
         <form>
             <label className='title'> Descreva sua tarefa</label>
-            <input
-                type="text"
+            <TextField
+                variant='standard'
                 className='input-tarefa'
                 value={tarefa}
                 onChange={handleChange}
             />
-            <button
-                type='button'
-                className='adicionar'
+
+            <Button
+                sx={{mt: 1, mb: 5}}
+                endIcon={<AddIcon />}
                 onClick={handleSubmit}
+                variant="contained"
+                size='small'
             >
                 Adicionar
-            </button>
-
+            </Button>
 
             {tarefas.map((tarefa, index) => (
                 <div className='card' key={index}>
                     <span className='task-name'>{tarefa}</span>
 
-                        <div className='icons'>
-                        <BsPencil onClick={() => aoAlterar(index)}/>
+                    <div className='icons'>
+                        <BsPencil onClick={() => aoAlterar(index)} />
                         <MdOutlineDoneOutline />
                         <BsTrash />
-                        </div>
+                    </div>
                 </div>
 
             ))

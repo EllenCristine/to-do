@@ -1,5 +1,7 @@
+import { ThemeProvider } from '@emotion/react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import theme from 'theme/mui';
 import AppRouter from './routes/routes';
 
 const root = ReactDOM.createRoot(
@@ -7,6 +9,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <AppRouter />
+    <ThemeProvider theme={theme}>
+      <AppRouter />
+    </ThemeProvider>
   </React.StrictMode>
 );
